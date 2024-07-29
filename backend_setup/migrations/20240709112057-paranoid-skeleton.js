@@ -1,0 +1,20 @@
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up (queryInterface, Sequelize) {
+ 
+    return queryInterface.addColumn('Users' , 'deletedAt' , {
+      type:Sequelize.DataTypes.DATE
+    })
+  },
+
+  async down (queryInterface, Sequelize) {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+  }
+};
